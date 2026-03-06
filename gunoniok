@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n=18;
+    int i=1;
+
+
+    do{
+        if (n % i == 0) {
+            printf("%d ", i);
+
+        }
+         i++;
+}
+while(i <= n);
+}
