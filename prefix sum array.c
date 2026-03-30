@@ -8,13 +8,9 @@ void prefixSum(int n)
     for(int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
 
-    // Prefix sum using swap-style update
+    // Proper prefix sum
     for(int i = 1; i < n; i++)
-    {
-        int temp = arr[i];   // store current
-        arr[i] = arr[i] + arr[i+1];  // update (like swap logic)
-       arr[i] + arr[i+1] = temp ;       // assign back just to show swap usage
-    }
+        arr[i] = arr[i] + arr[i-1];
 
     // Print prefix sum
     for(int i = 0; i < n; i++)
